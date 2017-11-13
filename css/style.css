@@ -21,16 +21,19 @@ body {
     color: #676767;
     overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
+    overflow: hidden;
 }
 
-.v-header {
+/*/ Video Cover /*/
+
+
+.pageWrapper {
     height: 100vh;
     display: flex;
     align-items: center;
     color: #fff;
 }
-
-
+s
 .videoContainer {
     max-width: 960px;
     padding: auto .25em;
@@ -50,8 +53,9 @@ body {
 fullScreenVideo video {
     min-width: 100%;
     min-height: 100%;
-    playback: 0.5;
 }
+
+/*/ Video Overlay /*/
 
 .vidOverlay {
     height: 100vh;
@@ -64,15 +68,36 @@ fullScreenVideo video {
     opacity: .25;
 }   
 
+
+/*/ Name Block /*/
+
 .content {
-    margin-top: 27%;
+    margin-top: 30%;
+    margin-bottom: 1%;  
+    z-index: 2;
+    text-align: center;
 }
 
 .content h1 {
+    color: transparent;
     z-index: 2;
-    font-size: 3em;
-    margin-bottom: 0;
-    text-shadow: 1px 1px black, 1.2px 1.2px black, -1.2px -1.2px white;
+    font-size: 5em;
+    margin-bottom: 0;   
+    letter-spacing: 9.2px;
+    text-shadow: 1.5px 1.5px rgba(45, 199, 0, 0.97), 1px 1px black, 1.2px 1.2px black, -1.2px -1.2px white;
+    text-shadow: 1.5px 1.5px transparent, 1px 1px black, 1.2px 1.2px black, -1.2px -1.2px white;
+    padding-bottom: 0;
+}
+
+.content h3  {
+    color: black;
+    margin-top: -.7em;
+    z-index: 2;
+    font-size: 1.4em;
+    margin-bottom: .5em;
+    letter-spacing: 1.2px;
+    text-shadow: 1.5px 1.5px rgba(45, 199, 0, 0.97), 1px 1px black, 1.2px 1.2px black, -1.2px -1.2px white;
+    text-shadow: 1.5px 1.5px transparent, 1px 1px black, 1.2px 1.2px black, -1.2px -1.2px white;
     padding-bottom: 0;
 }
 
@@ -88,17 +113,53 @@ fullScreenVideo video {
     margin-right: 15%;
     margin-left: 15%;
 }
-
-.press {
+/*
+.specialties {
     background: black;
     color: rgba(87, 167, 50, 0.64);
     font-size: 1.5em;
     margin: .25em;
     padding: .2em .5em;
     text-decoration: none;
-    border-radius: 2em;
+    border-radius: .2em;
     text-shadow: 1px 1px black, -0.9px -0.9px white, 1.2px 1.2px black;
     text-align: center;
+    margin-bottom: 1.1em;
+} */
+
+
+.specialties a {
+   /* background: black; */
+    color: rgba(87, 167, 50, 0.64);
+    font-size: 1.5em;
+    margin: .25em;
+    padding: .2em .5em;
+    text-decoration: none;
+    border-radius: .2em;
+    text-shadow: 1px 1px black, -0.9px -0.9px white, 1.2px 1.2px black;
+    text-align: center;
+    margin-bottom: 1.1em;
+    margin: .25em;
+    padding: .2em 1em;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1.5;
+}   
+
+.press {
+    background: black;
+  /*  color: rgba(87, 167, 50, 0.64); */
+    color: transparent; 
+    font-size: 1.5em;
+    margin: .25em;
+    padding: .2em .5em;
+    text-decoration: none;
+    border-radius: .2em;
+    text-shadow: 1px 1px black, -0.9px -0.9px white, 1.2px 1.2px black;
+    text-align: center;
+    margin-top: 1em;
+    border: .1em solid transparent;
+    letter-spacing: 2px;
 }
 
 .press a {
@@ -106,35 +167,69 @@ fullScreenVideo video {
     padding: .2em 1em;
     text-align: center;
     text-decoration: none;
+    margin-top: 5em;
+    letter-spacing: 2px;
+
+    background: black;
+    color: rgba(87, 167, 50, 0.64);
+    font-size: 1.5em;
+    margin: .25em;
+    padding: .2em .5em;
+    text-decoration: none;
+    border-radius: .2em;
+    text-shadow: 1px 1px black, -0.9px -0.9px white, 1.2px 1.2px black;
+    text-align: center;
+    margin-bottom: 1.1em;
 }    
 
 header {
     margin-bottom: 2em;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
 }
 
-.preSection {
-    margin-top: 2em;
-    margin-bottom: 3em;
-}
-.section {
-    padding: 20px 0;
-}
+/*  OPEN WHEN  CODING BEGINS FOR JS
+#launchSite {
 
-.sectionA {
-    background: #eee;
-    color: black;
+} */ 
+
+/*.sectionContainer {
+    width: 1080px;
+    /* z-index: 3; */  /*
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    z-index: 2;
+    clear: both;
+}  */
+
+#launchSite {
+    background: purple;
+    z-index: 3;
+    clear: both;
 }
 
 .sectionB {
-    background: #eee;
-    color: black;
+    background: yellow;
+}
+
+.container {
+    background: teal;
 }
 
 /*  Responsive Detail */
 
-@media (max-width: 960px){
+@media (max-width: 960px) {
     .videoContainer{
-        padding-right: 3em;
         padding-left: 3em;
+        padding-right: 3em;
     }
 }
+
+
+
+/*z-index: higher = closer, lower either further...huh?*/   
